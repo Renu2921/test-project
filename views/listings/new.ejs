@@ -1,0 +1,57 @@
+<%layout("/layouts/boilerplate")%>
+
+   <body>
+      <h3 class="text-center">Create a new Listing</h3>
+      <div class="d-flex justify-content-center">
+
+         <form method="POST" action="/listings" novalidate class="needs-validation">
+            <div class="mb-3 ">
+               <label for="title" class="form-label">Title</label>
+               <input name="title" placeholder="Enter title" type="text" class="form-control" required />
+               <div class="valid-feedback">
+                  Title Looks good!
+               </div>
+            </div>
+
+
+            <div class="mb-3">
+               <label for="description" class="form-label">Description</label>
+               <textarea name="description" placeholder="enter some description" type="text" class="form-control"
+                  required></textarea>
+               <div class="invalid-feedback">
+                  Please enter a short description
+               </div>
+            </div>
+
+            <div class="mb-3">
+               <label for="image" class="form-label">Image Link </label>
+               <input name="image" placeholder="Enter image URL/LINK" type="text" class="form-control">
+            </div>
+            <div class="row">
+               <div class="mb-3 col-md-4">
+                  <label for="price" class="form-label">Price</label>
+                  <input name="price" placeholder="Enter Price" class="form-control" required>
+                  <div class="invalid-feedback">
+                     Price should be valid
+                  </div>
+               </div>
+               <div class="mb-3 col-md-8">
+                  <label for="country" class="form-label">Country</label>
+                  <input name="country" placeholder="Enter country" type="text" class="form-control" required>
+                  <div class="invalid-feedback">
+                     Country name should be valid
+                  </div>
+               </div>
+            </div>
+            <div class="mb-3">
+               <label for="location" class="form-label">Location</label>
+               <input name="location" placeholder="Enter location" type="text" class="form-control" required>
+               <div class="invalid-feedback">
+                  location should be valid
+               </div>
+            </div>
+            <button class="btn btn-dark add-btn">Add</button>
+
+         </form>
+      </div>
+   </body>
